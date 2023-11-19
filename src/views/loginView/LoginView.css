@@ -1,0 +1,38 @@
+.login-container{
+ display: flex;
+ flex-direction: column;
+ padding: 8px;
+}
+/* Style for the login form block */
+.login-form {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* Style for form fields */
+  .login-form__field {
+    margin-bottom: 15px;
+  }
+  
+  /* Style for labels */
+  .login-form__label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  /* Style for input fields */
+  .login-form__input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Style for the login button */
+ 
+  
+  /* Hover effect for the login button */
+  .login-form__button:hover {
+    background-color: #45a049;
+  }
