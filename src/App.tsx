@@ -1,4 +1,4 @@
-import "./App.css";
+// import "./index.css";
 import { Route, Routes } from "react-router-dom";
 import LoginView from "./views/loginView/loginView";
 import HomeView from "./views/HomeView/HomeView";
@@ -15,4 +15,3 @@ function App() {
 }
 
 export default App;
-  

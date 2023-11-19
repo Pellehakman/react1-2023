@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer base {
   body {
-    @apply bg-green-600
+    @apply  h-full w-full transition-all bg-stone-800;
+  }
+  #app {
+    @apply h-full w-full transition-all flex flex-col bg-yellow-600;
   }
 }
 /* :root {

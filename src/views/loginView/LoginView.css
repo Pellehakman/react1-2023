@@ -1,38 +1,19 @@
-.login-container{
- display: flex;
- flex-direction: column;
- padding: 8px;
-}
-/* Style for the login form block */
 .login-form {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  
-  /* Style for form fields */
-  .login-form__field {
-    margin-bottom: 15px;
-  }
-  
-  /* Style for labels */
-  .login-form__label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  /* Style for input fields */
-  .login-form__input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  /* Style for the login button */
- 
-  
-  /* Hover effect for the login button */
-  .login-form__button:hover {
-    background-color: #45a049;
-  }
+  @apply max-w-md mx-auto p-8 bg-white shadow-lg rounded-lg;
+}
+
+.login-form__field {
+  @apply mb-6;
+}
+
+.login-form__label {
+  @apply block text-gray-700 text-sm font-bold mb-2;
+}
+
+.login-form__input {
+  @apply w-full p-3 border rounded-md;
+}
+
+.login-form__button {
+  @apply w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600;
+}

@@ -25,7 +25,7 @@ function LoginView() {
             className="login-form__input"
           />
         </div>
-        <button className=" p-4 bg-red-700">Login</button>
+        <button className="login-form__button">Login</button>
       </form>
     </>
   );
