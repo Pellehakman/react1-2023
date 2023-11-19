@@ -1,19 +1,36 @@
+.login-view{
+  @apply flex flex-col h-screen p-12
+}
 .login-form {
-  @apply max-w-md mx-auto p-8 bg-white shadow-lg rounded-lg;
+  @apply flex flex-col justify-between h-full ;
 }
+/* .login-form__container{
+  @apply  
+} */
 
-.login-form__field {
-  @apply mb-6;
-}
+/* .login-form__field {
+  @apply my-8;
+} */
 
 .login-form__label {
-  @apply block text-gray-700 text-sm font-bold mb-2;
+  @apply block  text-sm font-bold ;
 }
 
 .login-form__input {
-  @apply w-full p-3 border rounded-md;
+  @apply w-full p-3 border-b bg-transparent text-white;
+}
+.login-form__error{
+  @apply flex w-full justify-end text-xs p-2
 }
 
-.login-form__button {
-  @apply w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-600;
+.login-form__buttons{
+  @apply flex flex-col gap-2
 }
+.login-form__button {
+  @apply w-full text-white p-3 rounded-sm ;
+}
+/* Add the following style to change the placeholder text color */
+.login-form__input::placeholder {
+  color: white; /* replace with your desired color */
+}
+

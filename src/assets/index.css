@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ff-titillium: 'Titillium Web',  sans-serif;
+
+  --primary-400: #ff31ad;
+  --primary-500: #FE0098;
+  --primary-600: #b6026e;
+;
+ 
+
+}
+@layer base {
+  body {
+    @apply  h-full w-full transition-all bg-black text-white font-titillium;
+  }
+  #app {
+    @apply h-full w-full transition-all flex flex-col ;
+  }
+}
+
+* {
+  margin: 0;
+}
