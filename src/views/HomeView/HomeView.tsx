@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import "./HomeView.css";
+import SiteNav from "../../components/Nav/siteNav/siteNav";
 function HomeView() {
   return (
-    <nav className="nav-container">
-      <h1>Home </h1>
-      <Link className="logout" to="/login">Login</Link>
-
-    </nav>
+    <>
+      <SiteNav />
+      {/* <Link className="logout" to="/login">
+        Login
+      </Link> */}
+    </>
   );
 }
 
