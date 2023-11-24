@@ -66,16 +66,14 @@ const SiteNav = () => {
   ];
 
   return (
-    <div>
+    <div className="bg-primary-600 absolute w-full">
       <FontAwesomeIcon
         icon={faBars}
-        className={`p-4 text-white cursor-pointer ${
-          menuOpen ? "hidden" : "block"
-        }`}
+        className={`p-4 text-white  cursor-pointer`}
         onClick={toggleMenu}
       />
       <motion.nav
-        className={`fixed top-0 left-0 w-2/3 h-full bg-stone-950 shadow-md`}
+        className={`fixed top-0 left-0 w-3/4 h-full shadow-md bg-black bg-primary-400`}
         animate={menuOpen ? "open" : "closed"}
         variants={sidebarAnimation}
       >
@@ -88,7 +86,7 @@ const SiteNav = () => {
           {navLinks.map((link, index) => (
             <motion.li
               key={index}
-              className="p-4 rounded-sm bg-black shadow-md"
+              className="p-4 rounded-sm bg-primary-500 shadow-md"
               variants={itemAnimation}
               whileHover={{ scale: 0.95 }}
               whileTap={{ scale: 0.95 }}
