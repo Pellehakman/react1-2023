@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+<!-- import React, { useState } from "react";
 import "./siteNav.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
@@ -36,4 +36,4 @@ const SiteNav = () => {
 
 export default SiteNav;
  
-       <FontAwesomeIcon className="p-4 absolute" icon={faBars} onClick={toggleMenu} />
+       <FontAwesomeIcon className="p-4 absolute" icon={faBars} onClick={toggleMenu} /> -->
