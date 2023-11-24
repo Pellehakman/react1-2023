@@ -1,5 +1,5 @@
 // import { Link } from "react-router-dom";
-import "./loginView.css";
+import "./LoginView.css";
 function LoginView() {
   return (
     <div className="login-view">
@@ -13,7 +13,7 @@ function LoginView() {
       </div>
       <form className="login-form">
         <div className="login-form__container">
-        <div className="login-form__field">
+          <div className="login-form__field">
             <input
               name="email"
               placeholder="Email"
@@ -33,10 +33,12 @@ function LoginView() {
           </div>
         </div>
         <div className="login-form__buttons">
-        <button className="login-form__button bg-primary-500 hover:bg-primary-400 active:bg-primary-600">
+          <button className="login-form__button bg-primary-500 hover:bg-primary-400 active:bg-primary-600">
             Login
           </button>
-          <button className="login-form__button text-xs">No, account? Sign up</button>
+          <button className="login-form__button text-xs">
+            No, account? Sign up
+          </button>
         </div>
       </form>
     </div>
