@@ -1,7 +1,8 @@
 // import "./index.css";
 import { Route, Routes } from "react-router-dom";
-import LoginView from "./views/loginView/loginView";
+
 import HomeView from "./views/HomeView/HomeView";
+import LoginView from "./views/loginView/LoginView";
 
 function App() {
   return (
