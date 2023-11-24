@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import "./HomeView.css";
 import SiteNav from "../../components/Nav/siteNav/siteNav";
 function HomeView() {
