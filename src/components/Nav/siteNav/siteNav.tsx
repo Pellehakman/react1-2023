@@ -1,7 +1,6 @@
-
 import { motion } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faCalendar, faContactBook, faHouse, faMessage, faTimes, faUser } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
@@ -24,13 +23,7 @@ const SiteNav = () => {
     }),
     closed: {
       opacity: 0,
-      clipPath: "circle(30px at 40px 40px)",
-      transition: {
-        delay: 0.5,
-        type: "spring",
-        stiffness: 400,
-        damping: 40,
-      },
+     
     },
   };
 
@@ -61,9 +54,12 @@ const SiteNav = () => {
   };
 
   const navLinks = [
-    { to: "/login", label: "Login", className: "logout" },
-    { to: "/dashboard", label: "Dashboard", className: "dashboard" },
-    // Add more links as needed
+    
+    { to: "/", label: "Home", className: "dashboard", icon: faHouse  },
+    { to: "/", label: "Messages", className: "dashboard", icon: faMessage },
+    { to: "/", label: "Calender", className: "dashboard", icon: faCalendar  },
+    { to: "/", label: "Contacts", className: "dashboard", icon: faContactBook  },
+    { to: "/login", label: "Login", className: "logout", icon: faUser  }
   ];
 
   return (
@@ -74,25 +70,37 @@ const SiteNav = () => {
         onClick={toggleMenu}
       />
       <motion.nav
-        className={`fixed top-0 left-0 w-3/4 h-full shadow-md bg-black bg-primary-400`}
+        className={`fixed top-0 left-0 w-3/4 h-full shadow-md rounded-r-md bg-black bg-gradient-to-b from-gray-900 to-stone-900  p-4`}
         animate={menuOpen ? "open" : "closed"}
         variants={sidebarAnimation}
       >
+        <div className="flex w-full justify-end">
         <FontAwesomeIcon
           icon={faTimes}
-          className="p-4 text-white cursor-pointer"
+          className=" text-white cursor-pointer"
           onClick={toggleMenu}
         />
-        <motion.ul className="p-4 flex flex-col gap-4" variants={listAnimation}>
+        </div>
+        <div className="flex gap-4 p-4 mb-4  ">
+          <div className="bg-yellow-500 h-12 w-12 rounded-full flex justify-center items-center overflow-hidden">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaHVxtFr0EsmismCmwOrN_4fkCC0VoIUJ6ho3dxn3BEHyfM-HnK0EsDM0b202lY76fvnU&usqp=CAU"/>
+          </div>
+          <div className="flex flex-col justify-center">
+            <span className="text-xs">Good morning</span>
+            <span className="text-xl font-bold">Ada Lovelace</span>
+          </div>
+        </div>
+        <motion.ul className=" flex flex-col py-4 border-b border-t border-stone-700" variants={listAnimation}>
           {navLinks.map((link, index) => (
             <motion.li
               key={index}
-              className="p-4 rounded-sm bg-primary-500 shadow-md"
+              className="p-4"
               variants={itemAnimation}
               whileHover={{ scale: 0.95 }}
               whileTap={{ scale: 0.95 }}
             >
               <Link to={link.to} className={link.className}>
+                <FontAwesomeIcon icon={link.icon} className="mr-2" />
                 {link.label}
               </Link>
             </motion.li>
