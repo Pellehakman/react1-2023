@@ -74,13 +74,11 @@ const SiteNav = () => {
         animate={menuOpen ? "open" : "closed"}
         variants={sidebarAnimation}
       >
-        <div className="flex w-full justify-end">
         <FontAwesomeIcon
           icon={faTimes}
           className=" text-white cursor-pointer"
           onClick={toggleMenu}
         />
-        </div>
         <div className="flex gap-4 p-4 mb-4  ">
           <div className="bg-yellow-500 h-12 w-12 rounded-full flex justify-center items-center overflow-hidden">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaHVxtFr0EsmismCmwOrN_4fkCC0VoIUJ6ho3dxn3BEHyfM-HnK0EsDM0b202lY76fvnU&usqp=CAU"/>
