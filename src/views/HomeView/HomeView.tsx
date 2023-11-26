@@ -3,7 +3,7 @@ import SiteNav from "../../components/Nav/siteNav/siteNav";
 function HomeView() {
   return (
     <>
-      <SiteNav />
+      {/* <SiteNav /> */}
       {/* <Link className="logout" to="/login">
         Login
       </Link> */}
