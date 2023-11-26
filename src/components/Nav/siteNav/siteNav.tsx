@@ -29,7 +29,7 @@ const SiteNav = () => {
 
   const listAnimation = {
     open: {
-      transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+      transition: { staggerChildren: 0.07},
     },
     closed: {
       transition: { staggerChildren: 0.05, staggerDirection: -1 },
@@ -63,14 +63,14 @@ const SiteNav = () => {
   ];
 
   return (
-    <div className="bg-primary-600 absolute w-full">
+    <div className="bg-primary-600 absolute w-full shadow-md">
       <FontAwesomeIcon
         icon={faBars}
         className={`p-4 text-white  cursor-pointer`}
         onClick={toggleMenu}
       />
       <motion.nav
-        className={`fixed top-0 left-0 w-3/4 h-full shadow-md rounded-r-md bg-black bg-gradient-to-b from-gray-900 to-stone-900  p-4`}
+        className={`fixed top-0 left-0 w-full h-full shadow-md rounded-r-md  bg-gradient-to-b from-indigo-950 to-stone-950  p-4`}
         animate={menuOpen ? "open" : "closed"}
         variants={sidebarAnimation}
       >
@@ -80,7 +80,7 @@ const SiteNav = () => {
           onClick={toggleMenu}
         />
         <div className="flex gap-4 p-4 mb-4  ">
-          <div className="bg-yellow-500 h-12 w-12 rounded-full flex justify-center items-center overflow-hidden">
+          <div className="border-4 border-green-600 h-14 w-14 rounded-full flex justify-center items-center overflow-hidden">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaHVxtFr0EsmismCmwOrN_4fkCC0VoIUJ6ho3dxn3BEHyfM-HnK0EsDM0b202lY76fvnU&usqp=CAU"/>
           </div>
           <div className="flex flex-col justify-center">
@@ -88,7 +88,7 @@ const SiteNav = () => {
             <span className="text-xl font-bold">Ada Lovelace</span>
           </div>
         </div>
-        <motion.ul className=" flex flex-col py-4 border-b border-t border-stone-700" variants={listAnimation}>
+        <motion.ul className=" flex flex-col py-4" variants={listAnimation}>
           {navLinks.map((link, index) => (
             <motion.li
               key={index}
