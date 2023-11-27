@@ -1,5 +1,5 @@
 import "./HomeView.css";
-import SiteNav from "../../components/Nav/siteNav/siteNav";
+// import SiteNav from "../../components/Nav/siteNav/siteNav";
 function HomeView() {
   return (
     <>
